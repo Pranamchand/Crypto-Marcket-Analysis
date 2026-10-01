@@ -1,4 +1,5 @@
-# Cryptocurrency Market Data: Merging & Cleaning Pipeline
+# Cryptocurrency Market Data: Merging & Cleaning, Unfinished Project can be used for Further Analysis and ML modelling
+
 
 A data preparation project that consolidates and cleans historical daily market data for 23 major cryptocurrencies into a standardized, analysis-ready dataset.
 
@@ -10,32 +11,6 @@ Raw cryptocurrency price datasets are often distributed across individual CSV fi
 1. Ingests and combines individual coin datasets into a single master file.
 2. Applies data type standardizations, removes redundant identifiers, and creates data quality flags.
 3. Outputs a clean master CSV suitable for relational database import (e.g., MySQL) and downstream exploratory data analysis (EDA), business intelligence, or financial modeling.
-
----
-
-## Project Structure
-
-```text
-├── Datasets/
-│   ├── row/                     # 23 raw CSV files (one per cryptocurrency)
-│   ├── merged/
-│   │   └── crypto_master.csv    # Consolidated master dataset (37,082 rows, 11 columns)
-│   └── cleaned/
-│       └── crypto_master_cleaned.csv  # Final cleaned dataset (37,082 rows, 12 columns)
-├── Notebook/
-│   ├── Merge.ipynb              # Notebook for ingesting & merging raw coin files
-│   ├── cleaning.ipynb           # Notebook for cleaning, column transformations & flagging
-│   └── Understanding.ipynb      # Notebook for initial data exploration & inspection
-├── SQL Query/
-│   ├── Import.sql               # MySQL database & table creation schema with LOAD DATA script
-│   └── problem statement.sql    # Data quality queries & analytical problem statement outlines
-├── src/
-│   ├── __init__.py
-│   └── config.py                # Base project configuration
-├── Cryptocurrency Market Intelligence.pdf
-├── .gitignore
-└── README.md
-```
 
 ---
 
